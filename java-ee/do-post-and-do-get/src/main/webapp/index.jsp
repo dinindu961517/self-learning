@@ -2,12 +2,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Add-Two-Numbers</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
+<h1> "Get the addition of two numbers" >
 </h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+    <form action="add" method="get"> <!--default method is get -->
+        Enter first number     : <input type="text" name="num1"> <br><br>
+        Enter second number : <input type="text" name="num2"> <br>
+        <input type="submit">
+    </form>
+<h1> "Get the multiplication of two numbers" >
+</h1>
+<br/>
+<form action="add" method="post">
+    Enter first number     : <input type="text" name="num1"> <br><br>
+    Enter second number : <input type="text" name="num2"> <br>
+    <input type="submit">
+</form>
 </body>
 </html>
