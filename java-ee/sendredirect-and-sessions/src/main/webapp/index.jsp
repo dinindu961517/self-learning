@@ -9,7 +9,7 @@
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a><br>
-<form action="second">
+<form action="hello">
     Enter your name : <input type="text" name="name">
 
     <input type="submit">

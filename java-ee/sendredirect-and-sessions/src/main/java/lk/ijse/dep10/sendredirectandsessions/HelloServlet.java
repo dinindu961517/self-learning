@@ -5,7 +5,7 @@ import java.io.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
+@WebServlet(name = "helloServlet", value = "/hello")
 public class HelloServlet extends HttpServlet {
     private String message;
 
@@ -16,6 +16,8 @@ public class HelloServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
         String name = request.getParameter("name");
+
+
 
         // Hello
         PrintWriter out = response.getWriter();
@@ -28,6 +30,14 @@ public class HelloServlet extends HttpServlet {
                 "</form>");
         out.println("</body></html>");
         out.println();
+
+
+
+        //Session -Getting the session
+        HttpSession session = request.getSession();
+        //Setting the attributes
+        session.setAttribute("myName", name);
+        response.sendRedirect("second");
     }
 
     public void destroy() {
