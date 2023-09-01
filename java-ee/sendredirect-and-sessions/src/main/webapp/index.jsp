@@ -5,11 +5,13 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1> "Hello World!"
+<h1><%= "Hello World!" %>
 </h1>
-<form action="test">
-    Enter your name : <input type="text" name="name"><br>
-    Enter your age  : <input type="text" name="age"><br>
+<br/>
+<a href="hello-servlet">Hello Servlet</a><br>
+<form action="second">
+    Enter your name : <input type="text" name="name">
+
     <input type="submit">
 </form>
 </body>
