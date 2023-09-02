@@ -2,6 +2,7 @@ package lk.ijse.dep10.servletdispatcher;
 
 import java.io.*;
 
+import com.sun.security.jgss.GSSUtil;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
@@ -23,6 +24,9 @@ public class HelloServlet extends HttpServlet {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("second");
 //        requestDispatcher.include(request, response);
         requestDispatcher.forward(request,response);
+        System.out.println("The request is dispatched from the hello servlet");
+        PrintWriter writer = response.getWriter();
+        writer.println("<h1>Hello This from the Hello Servlet</h1>");
     }
 
     public void destroy() {

@@ -21,5 +21,11 @@ public class SecondServlet extends HttpServlet {
 
         writer.println(color);
 
+        writer.println("<a href=\"third\">Hello Servlet</a>");
+        System.out.println("The request is dispatched from the second servlet");
+        writer.println("<h1>Hello This from the second Servlet</h1>");
+
+
+
     }
 }
